@@ -1,12 +1,12 @@
 $(document).ready(function(){
-    $.getJSON('http://192.168.1.121:8000/api/posts', function(data){
+    $.getJSON('https://pure-ocean-68917.herokuapp.com/posts', function(data){
         function getRow(row) {
             return `
                 <div class='container'>
                     <div class='row row-content'>
                         <div class='col col-sm-12 col-md-8'>
                             <div>
-                                <img style='width: 500px;' src='http://192.168.1.121:8000${row.image}'>
+                                <img style='width: 500px;' src='https://pure-ocean-68917.herokuapp.com${row.image}'>
                             </div>
                             <div class='mt-4'>
                                 <h3 class='text-dark'> ${row.title}</h3>
@@ -15,7 +15,7 @@ $(document).ready(function(){
                                 <p style='width: 500px;' class='text-dark'> ${row.content}</p>
                             </div>
                             <div>
-                                <form  action="http://192.168.1.121:8000/api/comments" method="POST"">
+                                <form  action="https://pure-ocean-68917.herokuapp.com/comments" method="POST"">
                                     <div class="form-check-inline">
                                         <input name="postId" value=${row.id} hidden>
                                         <div class="mr-2">
@@ -47,7 +47,7 @@ $(document).ready(function(){
         $('#blog_section').append(htmlRow.reduce((acc, cur) => acc + cur, ''));
     });
 
-    $.getJSON('http://192.168.1.121:8000/api/categories', function(data){
+    $.getJSON('https://pure-ocean-68917.herokuapp.com/categories', function(data){
         function getCat(row){
             return `
                 <div class="input-group">
@@ -99,7 +99,7 @@ $(document).ready(function(){
         $('#body-main').append(htmlCat.reduce((acc, cur) =>cur, ''));
     });
 
-    $.getJSON('http://192.168.1.121:8000/api/categories', function(data) {
+    $.getJSON('https://pure-ocean-68917.herokuapp.com/categories', function(data) {
         var category = '';
         $.each(data, function (key, value) {
            category += '<tr>';
