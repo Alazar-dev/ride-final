@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $.getJSON('http://pure-ocean-68917.herokuapp.com/posts', function(data){
+    $.getJSON('https://pure-ocean-68917.herokuapp.com/posts', function(data){
         function getRow(row) {
             return `
                 <div class='container'>
