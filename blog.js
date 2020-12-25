@@ -47,7 +47,7 @@ $(document).ready(function(){
         $('#blog_section').append(htmlRow.reduce((acc, cur) => acc + cur, ''));
     });
 
-    $.getJSON('https://pure-ocean-68917.herokuapp.com/categories', function(data){
+    $.getJSON('http://pure-ocean-68917.herokuapp.com/categories', function(data){
         function getCat(row){
             return `
                 <div class="input-group">
