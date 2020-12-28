@@ -1,10 +1,16 @@
 $(document).ready(function(){
+    $("#blogSearch").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#blogDiv *").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
     $.getJSON('https://pure-ocean-68917.herokuapp.com/posts', function(data){
         function getRow(row) {
             return `
                 <div class='container'>
                     <div class='row row-content'>
-                        <div class='col col-sm-12 col-md-8'>
+                        <div id="blogDiv" class='col col-sm-12 col-md-8'>
                             <div>
                                 <img style='width: 500px;' src='https://pure-ocean-68917.herokuapp.com${row.image}'>
                             </div>
@@ -51,7 +57,7 @@ $(document).ready(function(){
         function getCat(row){
             return `
                 <div class="input-group">
-                    <input type="text" class="form-control">
+                    <input id="blogSearch" type="text" class="form-control" placeholder="Search...">
                 </div>
                 <h5 class="text-dark py-4">CATEGORY</h5>
                 <table id="category-table"></table>
