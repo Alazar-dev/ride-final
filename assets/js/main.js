@@ -1,5 +1,5 @@
 /**
-* Template Name: Arsha - v2.2.1
+* Template Name: Arsha - v2.3.0
 * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -7,8 +7,17 @@
 !(function($) {
   "use strict";
 
+  // Preloader
+  $(window).on('load', function() {
+    if ($('#preloader').length) {
+      $('#preloader').delay(100).fadeOut('slow', function() {
+        $(this).remove();
+      });
+    }
+  });
+
   // Smooth scroll for the navigation menu and links with .scrollto classes
-  var scrolltoOffset = $('#header, #footer').outerHeight() - 2;
+  var scrolltoOffset = $('#header').outerHeight() - 2;
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -154,8 +163,6 @@
       itemSelector: '.portfolio-item'
     });
 
-
-
     $('#portfolio-flters li').on('click', function() {
       $("#portfolio-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
@@ -193,4 +200,17 @@
     aos_init();
   });
 
+  $("#buttonToggle").click(function() {
+    var elem = $("#buttonToggle").text();
+    if (elem == "Read More") {
+      $("#buttonToggle").text("Read Less");
+      $("#readMore").slideDown();
+    } else {
+      $("#buttonToggle").text("Read More");
+      $("#readMore").slideUp();
+    }
+  });
+
 })(jQuery);
+
+
