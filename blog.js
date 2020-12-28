@@ -1,10 +1,4 @@
 $(document).ready(function(){
-    $("#blogSearch").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $("#blogDiv *").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
-    });
     $.getJSON('https://pure-ocean-68917.herokuapp.com/posts', function(data){
         function getRow(row) {
             return `
@@ -43,10 +37,6 @@ $(document).ready(function(){
                         </div>
                     </div>
                 </div>
-
-
-
-
             `;
         }
         let htmlRow = data.map(d => getRow(d));
@@ -57,7 +47,7 @@ $(document).ready(function(){
         function getCat(row){
             return `
                 <div class="input-group">
-                    <input id="blogSearch" type="text" class="form-control" placeholder="Search...">
+                    <input type="text" class="form-control" placeholder="Search...">
                 </div>
                 <h5 class="text-dark py-4">CATEGORY</h5>
                 <table id="category-table"></table>
