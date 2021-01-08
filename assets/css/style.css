@@ -706,3 +706,16 @@ section {
 #pricing{
   height: 30rem;
 }
+
+.hiddenCarImages{
+  display: none;
+}
+.hiddenCorporateCarImages{
+  display: none;
+}
+.hiddenMidSizeCarImages{
+  display: none;
+}
+.hiddenEnglishSpeakerCarImages{
+  display: none;
+}
