@@ -166,7 +166,6 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-
 #hero .container {
   padding-top: 72px;
 }
@@ -237,6 +236,13 @@ section {
   background-position: center;
   background-size: 70rem;
 }
+@media screen and (max-width: 1212px) {
+  .cliens h5{
+    background-image: none;
+    visibility: hidden;
+  }
+}
+
 
 .cliens img {
   max-width: 45%;
