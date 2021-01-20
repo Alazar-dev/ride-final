@@ -161,9 +161,6 @@ h1, h2, h3, h4, h5, h6 {
 #header .menu{
   background-color: red;
 }
-.bg-dark .navigate{
-  
-}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -246,7 +243,7 @@ section {
   background-size: 70rem;
 }
 @media screen and (max-width: 1212px) {
-  .cliens h5{
+  .cliens h5, .cliens h3, .cliens img{
     visibility: hidden;
     background-repeat: none;
     background-size: 50% 50%;
@@ -255,25 +252,10 @@ section {
 }
 
 @media screen and (max-width: 1212px) {
-  .cliens h3 {
-    visibility: hidden;
-    background-repeat: none;
-    background-size: 50% 50%;
-  }
-}
-@media screen and (max-width: 1212px) {
-  .cliens img {
-    visibility: hidden;
-    background-repeat: none;
-    background-size: 50% 50%;
-  }
-}
-@media screen and (max-width: 1212px) {
   .cliens {
     background-size: 95% 80%;
   }
 }
-
 
 .cliens img {
   max-width: 45%;
