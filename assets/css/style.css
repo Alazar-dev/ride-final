@@ -33,6 +33,10 @@ h1, h2, h3, h4, h5, h6 {
 
   
 }
+
+.hesh {
+  color: white;
+}
 @media screen and (max-width: 1212px) {
   .header-low-nav {
     visibility: hidden;
@@ -154,7 +158,12 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
   color: white;
 }
-
+#header .menu{
+  background-color: red;
+}
+.bg-dark .navigate{
+  
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
