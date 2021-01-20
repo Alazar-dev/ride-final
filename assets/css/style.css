@@ -237,9 +237,19 @@ section {
   background-size: 70rem;
 }
 @media screen and (max-width: 1212px) {
-  .cliens h5{
-    background-image: none;
+  .cliens h5, h3{
     visibility: hidden;
+    background-repeat: repeat-x;
+    background-size: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 1212px) {
+  .cliens {
+    background-size: 100% 50%;
+  }
+  .cliens img{
+    margin-top: -4rem;
   }
 }
 
