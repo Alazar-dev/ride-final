@@ -4,6 +4,7 @@ body {
   color: white;
   width: 100%;
   height: auto;
+
 }
 
 a {
@@ -777,4 +778,15 @@ section {
 .hashtag{
   background-color: white;
   color: white;
+}
+
+.my-2{
+  height: 17rem;
+}
+.my-3{
+  width: 15rem;
+  padding: 0 5px 0 50px;
+}
+.shrek{
+  margin-left: -8rem;
 }
