@@ -100,7 +100,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: -1px;
     margin-left: 43px;
     width: 176px;
-    margin-left: ;
   }
   .nav-social-links {
     display: none;
@@ -238,7 +237,7 @@ section {
   background-size: 70rem;
 }
 @media screen and (max-width: 1212px) {
-  .cliens h5, h3, img{
+  .cliens h5{
     visibility: hidden;
     background-repeat: none;
     background-size: 50% 50%;
@@ -246,6 +245,20 @@ section {
   }
 }
 
+@media screen and (max-width: 1212px) {
+  .cliens h3 {
+    visibility: hidden;
+    background-repeat: none;
+    background-size: 50% 50%;
+  }
+}
+@media screen and (max-width: 1212px) {
+  .cliens img {
+    visibility: hidden;
+    background-repeat: none;
+    background-size: 50% 50%;
+  }
+}
 @media screen and (max-width: 1212px) {
   .cliens {
     background-size: 95% 80%;
